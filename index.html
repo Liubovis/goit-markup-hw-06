@@ -23,6 +23,27 @@
               <use href="./images/sprite.svg#close"></use>
             </svg>
           </button>
+
+          <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
+          <label class="form-label" for="name">Ім'я</label>
+          <input class="form-input" type="text" name="size" id="name" />
+
+          <label class="form-label" for="phone">Телефон</label>
+          <input class="form-input" type="tel" name="size" id="phone" />
+
+          <label class="form-label" for="email">Пошта</label>
+          <input class="form-input" type="email" name="size" id="email" />
+
+          <label class="form-label" for="textarea">Коментар</label>
+          <textarea class="form-input textarea" id="textarea" name="textarea" rows="3"
+            placeholder="Введіть текст"></textarea>
+
+          <label class="form-label" for="policy">Погоджуюся з розсилкою та приймаю
+            <a class="form-link" href="#">Умови договору</a>
+          </label>
+          <input class="form-input" type="checkbox" name="policy" id="policy" />
+
+          <button class="btn btn-form" type="submit">Відправити</button>
         </form>
       </div>
 
@@ -75,7 +96,7 @@
             <div class="ovarlay"></div>
             <div class="container">
               <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-              <button class="hero-btn" type="button" data-modal-open>Замовити послугу</button>
+              <button class="btn hero-btn" type="button" data-modal-open>Замовити послугу</button>
             </div>
 
           </section>
@@ -437,6 +458,18 @@
               </ul>
             </div>
 
+            <div class="footer-form-wrapper">
+              <form class="footer-form">
+                <label class="form-label footer-form-label" for="footer-email">Підпишіться на розсилку</label>
+                <input class="form-input footer-form-input" type="email" id="footer-email" name="footer-email"
+                  placeholder="E-mail">
+                <button class="btn btn-form" type="submit">Підписатися
+                  <svg class="email-icon">
+                    <use href="./images/sprite.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
           </div>
         </footer>
       </div>

@@ -109,8 +109,6 @@ body {
 }
 
 /* Page */
-
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -274,8 +272,7 @@ body {
   text-transform: uppercase;
 }
 
-.hero-btn {
-  padding: 10px 32px;
+.btn {
   margin: 0 auto;
 
   font-size: 16px;
@@ -294,8 +291,12 @@ body {
   cursor: pointer;
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
+.hero-btn {
+  padding: 10px 32px;
+}
+
+.btn:hover,
+.btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -747,6 +748,7 @@ body {
 
 .footer-socials {
   width: 206px;
+  margin-right: 93px;
 }
 
 .footer-socials .socials-icon {
@@ -760,6 +762,10 @@ body {
   font-weight: 700;
   letter-spacing: 0.03em;
   line-height: 1.2;
+}
+
+.btn-form {
+  padding: 10px 52px;
 }
 
 /* Assets */
