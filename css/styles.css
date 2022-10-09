@@ -73,14 +73,11 @@ body {
 
 .modal-form {
   position: absolute;
-
   width: 528px;
-  height: 581px;
-
+  padding: 40px 40px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--primary-background-color);
-
   animation: fadeInDown;
   animation-duration: 1s;
 }
@@ -106,6 +103,136 @@ body {
   width: 18px;
   height: 18px;
   fill: var(--logo-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn-close:hover .modal-icon-close,
+.modal-btn-close:focus .modal-icon-close {
+  fill: var(--accent-text-color);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+  margin-bottom: 10px;
+}
+
+.last-element {
+  margin-bottom: 20px;
+}
+
+.form-element .form-input:focus+svg {
+  fill: var(--accent-background-color);
+}
+
+.form-label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: 1px solid rgba(33, 33, 33, 0.2);
+  outline-offset: -1px;
+
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  cursor: pointer;
+}
+
+.form-input:focus {
+  outline: 1px solid var(--accent-background-color);
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  translate: 0 -50%;
+}
+
+.textarea {
+  min-height: 120px;
+  padding: 12px 16px;
+
+  resize: none;
+}
+
+textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-checkbox-wrapper {
+  margin-bottom: 30px;
+}
+
+.form-checkbox-label,
+.form-checkbox-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+}
+
+.check-icon {
+  display: inline;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  fill: none;
+  background-color: var(--primary-background-color);
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 2px;
+
+  cursor: pointer;
+}
+
+.form-checkbox:checked+.form-checkbox-label .check-icon {
+  fill: var(--primary-background-color);
+  background-color: var(--accent-background-color);
+  border: 2px solid var(--accent-background-color);
+}
+
+.form-checkbox-link {
+  margin-left: 7px;
+  color: var(--accent-text-color);
+  text-decoration: underline;
 }
 
 /* Page */
@@ -273,6 +400,10 @@ body {
 }
 
 .btn {
+  display: block;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px;
   margin: 0 auto;
 
   font-size: 16px;
@@ -698,7 +829,8 @@ body {
 }
 
 .footer-adress-wrapper {
-  margin-right: 70px;
+  width: 207px;
+  margin-right: 93px;
 }
 
 .logo-footer {
@@ -755,17 +887,50 @@ body {
   fill: var(--white-text-color);
 }
 
-.footer-socials-desc {
+.footer-socials-desc,
+.footer-form-label {
+  display: block;
   margin-bottom: 20px;
-  color: var(--white-text-color);
-  text-transform: uppercase;
+
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.03em;
   line-height: 1.2;
+  color: var(--white-text-color);
+  text-transform: uppercase;
 }
 
-.btn-form {
-  padding: 10px 52px;
+.footer-form-input {
+  display: inline;
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 9px;
+
+  color: var(--white-text-color);
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* border-radius: 4px; */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-form-input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form-btn {
+  display: inline;
+}
+
+.email-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
 
 /* Assets */
